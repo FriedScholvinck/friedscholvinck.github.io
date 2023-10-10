@@ -1,0 +1,46 @@
+body {
+    background: white;
+}
+h1 {
+  position: absolute;
+  top: -.3rem;
+  box-shadow: 0 3px 0 black, 0 -3px 0 black;
+  background: white;
+  line-height: 4rem;
+  font-size: 2.5rem;
+  font-family: 'Vidaloka', serif;
+  left: 1rem;
+  z-index: 9999;
+}
+
+#links {
+  position: absolute;
+  top: 7rem;
+  left: 1rem;
+  z-index: 9999;
+}
+#links a {
+  color: black;
+  font-family: 'Vidaloka', serif;
+  background: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 3px solid black;
+  position: relative;
+  box-shadow: -3px 3px black;
+}
+#links a:hover {
+  color: rgba(0,0,0,0.8);
+}
+#links a:active {
+  top: 3px;
+  left: -3px;
+  box-shadow: 0 0 black;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    background: white;
+    left: 0;
+}
