@@ -1,68 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="friet.png" />
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fried's Website</title>
-  </head>
-  <body>  
-    <div class="hero">
-      <nav>
-        <a href="">
-          <img src="friet.png" class="logo">
-      </a>
-          <a href="contact.html" class="button">Contact</a>
-      </nav>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fried Schölvinck CV">
+  <meta name="author" content="Fried Schölvinck">
+  
+  <title>Fried</title>
+  <link rel="icon" type="image/png" href="friet.png" />
 
-      <div class="content">
-          <span class="title">Machine Learning Enigneer</span>
-          <h1>Hello, I'm <span>Fried</span></h1>
-          <p>I'm a Machine Learning Engineer for <a href="https://www.xomnia.com/" target="_blank"><xomnia>Xomnia</xomnia></a> in Amsterdam.</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
 
+  <sectio class="nav">
+    <h1>FRIED SCHÖLVINCK</h1>
+    <h3 class="span loader"><span class="m">M</span><span class="m">A</span><span class="m">C</span><span class="m">H</span><span class="m">I</span><span class="m">N</span><span class="m">E</span><span class="m">&nbsp;</span><span class="m">L</span><span class="m">E</span><span class="m">A</span><span class="m">R</span><span class="m">N</span><span class="m">I</span><span class="m">N</span><span class="m">G</span><span class="m">&nbsp;</span><span class="m">E</span><span class="m">N</span><span class="m">G</span><span class="m">I</span><span class="m">N</span><span class="m">E</span><span class="m">E</span><span class="m">R</span></h3>
+    <div class="nav-container"><a class="nav-tab" href="#tab-work">WORK</a><a class="nav-tab" href="#tab-education">EDUCATION</a><a class="nav-tab" href="#tab-projects">PROJECTS</a><a class="nav-tab" href="#tab-skills">SKILLS</a><a class="nav-tab" href="#tab-contact">CONTACT</a><span class="nav-tab-slider"></span></div>
+  </sectio>
+  <main class="main">
+    <section class="slider" id="tab-work">
+      <h1>WORK</h1>
+      <h2>Machine Learning Engineer (Xomnia)</h2>
+      <h2>Support Engineer (Xomnia)</h2>
+      <h2>Tutor in math, physics, programming (Lyceo)</h2>
+    </section>
+    <section class="slider" id="tab-education">
+      <h1>EDUCATION</h1>
+      <h2>MSc. Artificial Intelligence</h2>
+      <!-- Free University, Amsterdam GPA 8.0 | advanced machine learning, deep learning, evolutionary computing | thesis on music generation and evolutionary computing -->
+      <h2>BSc. Bèta-Gamma | Brain & Cognition</h2>
+    </section>
+    <section class="slider" id="tab-projects">
+      <h1>PROJECTS</h1>
+      <h2>CatFinder <a href="https://catfinder.tools" target="_blank">catfinder.tools</a></h2>
+      <h2>AI Startup LAB <a href="https://ace-incubator.nl/ai-lab/" target="_blank">UvA Incubator Project</a></h2>
+    </section>
+    <section class="slider" id="tab-skills">
+      <h1>SKILLS</h1>
+      <h2>Python</h2>
+    </section>
+    <section class="slider" id="tab-contact">
+      <h1>CONTACT</h1>
+      <a href="mailto:fried.scholvinck@gmail.com">Mail</a>
+      <a href="https://www.linkedin.com/in/fried-scholvinck/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/FriedScholvinck" target="_blank">GitHub</a>
 
-          
-      </div>
-      <a href="#work">
-        <div class="mouse_scroll">
-          <div class="mouse">
-            <div class="wheel"></div>
-          </div>
-          <div>
-            <span class="m_scroll_arrows unu"></span>
-            <span class="m_scroll_arrows doi"></span>
-            <span class="m_scroll_arrows trei"></span>
-          </div>
-        </div>
-      </a>
-    </div>
+    </section>
+  </main>
+  
+  <canvas class="background"></canvas>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
 
-    <!-- <h2>Work Experience</h2> -->
-
-    <main>
-      <section id="work" class="gradient">
-        <h3>Machine Learning Engineer, Xomnia</h3>
-        <p>Talent Program on Data Science and Data Engineering</p>
-        <p>Support Engineer, Xomnia</p>
-        <p>Tutor, Lyceo</p>
-      </section>
-
-      <section class="gradient right">
-        <h2>Education</h2>
-        <p>MSc. Artificial Intelligence</p>
-        <p>BSc. Beta-Gamma - Brain & Cognition</p>
-      </section>
-
-      <section class="gradient">
-        <h2>Projects</h2>
-        <h3>AI Startup LAB</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-    </main>
-    
-
-  </body>
+</body>
 </html>
