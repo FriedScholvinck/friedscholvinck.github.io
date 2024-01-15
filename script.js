@@ -1,3 +1,14 @@
+const inputText = "machine learning engineer";
+const dynamicHeader = document.getElementById("dynamicHeader");
+
+for (let i = 0; i < inputText.length; i++) {
+    const spanElement = document.createElement("span");
+    spanElement.className = "m";
+    spanElement.textContent = inputText[i];
+    dynamicHeader.appendChild(spanElement);
+}
+
+
 window.onload = function () {
   Particles.init({
     selector: ".background"
@@ -126,9 +137,3 @@ class NavigationPage {
 }
 
 new NavigationPage();
-/* Credit and Thanks:
-Matrix - Particles.js;
-SliderJS - Ettrics;
-Design - Sara Mazal Web;
-Fonts - Google Fonts
-*/
