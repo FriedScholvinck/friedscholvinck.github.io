@@ -137,3 +137,24 @@ class NavigationPage {
 }
 
 new NavigationPage();
+
+// Select the elements
+const yearLeft = document.querySelector('.year-left');
+const yearRight = document.querySelector('.year-right');
+
+// Create the observer
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add the animation class when the element comes into view
+      entry.target.classList.add('fly-in');
+    } else {
+      // Remove the animation class when the element goes out of view
+      entry.target.classList.remove('fly-in');
+    }
+  });
+});
+
+// Observe the elements
+observer.observe(yearLeft);
+observer.observe(yearRight);
