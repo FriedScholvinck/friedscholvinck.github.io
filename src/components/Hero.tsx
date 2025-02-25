@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const solutions = ["intelligent AI solutions", "scalable web applications", "robust REST APIs", "cloud platforms", "data pipelines", "AI chatbots", "intelligent agents", "ML models", "deep learning systems", "real-time analytics"];
+const solutions = ["AI solutions", "websites", "scalable web applications", "robust REST APIs", "cloud platforms", "data pipelines", "AI chatbots", "dynamic agents", "custom ML models", "real-time analytics"];
 export default function Hero() {
   const [currentText, setCurrentText] = useState("");
   const [currentSolutionIndex, setCurrentSolutionIndex] = useState(0);
