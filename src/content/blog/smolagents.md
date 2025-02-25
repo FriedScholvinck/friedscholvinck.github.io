@@ -2,13 +2,9 @@
 date: "2025-02-26"
 tags: ["AI", "Open Source", "OpenWebUI", "Smolagents"]
 
-## What
-
 HuggingFace's Smolagents is a lightweight framework for building AI agents that can reason through problems step by step. It provides simple ways to create agents that can think, solve problems, and interact with users through natural language.
 
 While Smolagents offers powerful capabilities for creating AI assistants, it doesn't come with built-in integration pathways to user interfaces or other applications. This is where creating an OpenAI-compatible API wrapper becomes valuable, acting as a bridge between Smolagents and the ecosystem of tools built for OpenAI's API format.
-
-## Why
 
 Creating an OpenAI-compatible API wrapper for Smolagents enables:
 
@@ -18,7 +14,7 @@ Creating an OpenAI-compatible API wrapper for Smolagents enables:
 - Seamlessly switching between different AI models behind the same API
 - Building on established patterns for authentication and request handling
 
-## How
+## How to do this?
 
 ### 1. Create an OpenAI-Compatible API Server
 
