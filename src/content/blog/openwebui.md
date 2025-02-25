@@ -1,10 +1,14 @@
 # OpenWebUI: Open Source AI Chat for Your Company
+date: "2025-02-25"
+tags: ["Open Source", "AI", "Chat", "WebUI"]
 
 I've always had a soft spot for open source software. There's something beautiful about the community-driven approach - people building things together just because they're useful and interesting. Lately, I've been thinking a lot about how open source AI applications are quietly catching up to proprietary solutions. The gap is closing faster than most people realize.
 
 For me, it's also about sovereignty. I'm not particularly comfortable with my company's data living exclusively on servers in the US, controlled by a handful of tech giants. Digital independence matters, especially when you're working with sensitive information or simply want control over your tech stack.
 
-That's why I've been experimenting with OpenWebUI, and thought I'd share my experience setting it up.
+That's why I've been experimenting with [OpenWebUI](https://docs.openwebui.com/), and thought I'd share my experience setting it up.
+
+![OpenWebUI](/images/blog/owui.png)
 
 ## What is OpenWebUI?
 

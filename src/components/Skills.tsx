@@ -1,16 +1,19 @@
 import { Card } from "@/components/ui/card";
 const skills = [{
-  category: "Programming & Development",
-  items: ["Advanced Python", "React", "TypeScript", "FastAPI", "Pydantic", "Poetry", "Ruff"]
-}, {
+  category: "Python",
+  items: ["Advanced Python", "React", "TypeScript", "FastAPI", "Pydantic", "Poetry", "uv", "ruff"]
+},  {
   category: "Machine Learning & AI",
-  items: ["PyTorch", "Transformers", "Scikit-learn", "Deep Learning", "Computer Vision"]
+  items: ["PyTorch", "Transformers", "Scikit-learn", "Deep Learning", "Computer Vision", "Pandas", "OpenAI"]
 }, {
-  category: "Data Engineering",
-  items: ["Polars", "PySpark", "Pandas", "AWS", "Azure", "GCP", "Databricks"]
+  category: "Engineering",
+  items: ["Polars", "PySpark", "AWS", "Azure", "GCP", "Databricks"]
 }, {
   category: "DevOps & Infrastructure",
   items: ["Docker", "Kubernetes", "Terraform", "CI/CD", "Git"]
+}, {
+  category: "dev tools",
+  items: ["bash", "vim", "raycast", "cursor"]
 }];
 export default function Skills() {
   return <section id="skills" className="section-padding">
