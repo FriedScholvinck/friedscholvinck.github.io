@@ -1,70 +1,85 @@
-# Supercharge Your Raycast Experience: Connect to Custom AI Models
+# How to enable any LLM from `⌘ + space`
 
-Ever felt like you're missing out by only using the default ChatGPT model in Raycast? With a simple tweak, you can connect Raycast to your own custom OpenWebUI models or access the variety of models available through OpenRouter. Let me show you how to unlock this hidden potential.
+If you're a developer, you've probably experienced those moments when you need a quick answer while coding or doing some other task.. ChatGPT's desktop app has made this incredibly convenient with its global shortcut `⌥ + space` (Option + Space). No matter what application you're in, whether it's your code editor, terminal, or browser, you can instantly summon ChatGPT with this keyboard combination and it will present you with a floating chat interface.
 
-## The Magic of Custom Models
+This seamless integration into your workflow is a game-changer for productivity. Instead of context-switching to your browser, logging in, and navigating to ChatGPT, you can get answers without breaking your flow. 
 
-Raycast is already a productivity powerhouse, but the default ChatGPT extension limits you to OpenAI's models. Meanwhile, you might have local models running through OpenWebUI or want to tap into the diverse offerings on OpenRouter.
+This is usefull, but it is not easy to modify its behavior or call other LLMs from this shortcut. Raycast offers more flexibility and customization options with its extendable architecture.
 
-The good news? You don't need a completely new extension or complex setup. With a simple URL change, you can redirect your existing ChatGPT extension to work with these alternative sources.
+## Setting up Raycast with ChatGPT
 
-## Getting It Done
+First, install [Raycast](https://www.raycast.com/) if you haven't already. It's a powerful productivity tool that can replace Spotlight on macOS.
 
-Here's the straightforward process to connect your Raycast ChatGPT extension to custom models:
+Once installed, open Raycast (default shortcut is `⌘ + space`) and follow these steps:
 
-1. **Install prerequisites**
-   - Make sure you have Raycast installed
-   - Install the ChatGPT extension if you haven't already
-   - Have your OpenWebUI instance running or an OpenRouter account set up
+1. Press `⌘ + ,` to open Raycast preferences
+2. Go to Extensions
+3. Search for "ChatGPT" in the Store tab
+4. Click Install
 
-2. **Find the extension settings**
-   - Open Raycast (⌘+Space)
-   - Type "Extensions" and select "Extensions" from the results
-   - Find and select "ChatGPT" from your installed extensions
-   - Click on "Extension Settings"
+## Configuring the Extension
 
-3. **Change the base URL**
-   - Look for the "API URL" or "Base URL" field
-   - For OpenWebUI: Replace the default URL with your local instance URL (typically something like `http://localhost:8080/v1`)
-   - For OpenRouter: Use `https://openrouter.ai/api/v1`
+After installation, you'll need to configure the extension with your API key:
 
-4. **Add your API key**
-   - For OpenWebUI: Enter your local instance API key
-   - For OpenRouter: Enter your OpenRouter API key
+1. Open Raycast preferences again
+2. Go to Extensions > ChatGPT
+3. Click on the extension settings
+4. Enter your API key
 
-5. **Configure model options (if available)**
-   - Some setups may allow you to specify which model you want to use
-   - This might be in a separate field called "Model" or similar
+By default, the extension uses OpenAI's API endpoint. However, you can modify the base URL to point to any compatible API endpoint.
 
-6. **Test your connection**
-   - Close the settings
-   - Open a new chat in Raycast
-   - Try sending a message to verify your custom model responds
+## Using Alternative LLM Providers
 
-## The Benefits You'll Notice
+### OpenRouter
 
-After making this change, you'll immediately gain several advantages:
+To use OpenRouter instead of OpenAI directly:
 
-- **Access to specialized models**: Use models fine-tuned for coding, creative writing, or specific knowledge domains
-- **Cost savings**: Local models have no usage fees, and OpenRouter might offer better pricing for certain models
-- **Privacy control**: Keep sensitive queries on your local machine rather than sending them to OpenAI
-- **Consistent experience**: Use the same familiar Raycast interface while leveraging different AI backends
-- **Flexibility**: Switch between different models for different tasks without changing your workflow
+1. Get an API key from [OpenRouter](https://openrouter.ai/)
+2. In the extension settings, change the API Base URL to:
+   ```
+   https://openrouter.ai/api/v1
+   ```
+3. Enter your OpenRouter API key
 
-## Troubleshooting Tips
+Now you can use any model available on OpenRouter directly from Raycast!
 
-If things aren't working right away:
+### Self-hosted OpenWebUI
 
-- Double-check your API key for typos
-- Verify your base URL includes the correct endpoint path
-- Ensure your local instance is actually running (if using OpenWebUI)
-- Check your OpenRouter account for any usage limits or restrictions
-- Restart Raycast after making changes
+If you're running your own OpenWebUI instance (as described in my [previous post](/blog/openwebui)), you can point Raycast to your deployment:
 
-## Final Thoughts
+1. In the extension settings, change the API Base URL to your OpenWebUI instance:
+   ```
+   https://your-openwebui-instance.com/v1
+   ```
+2. Use your OpenWebUI API key
 
-This simple modification opens up a world of possibilities for your Raycast workflow. Whether you're running local models to keep your data private or tapping into OpenRouter's model marketplace for specialized AI capabilities, you're no longer limited to just what the default extension offers.
+This setup allows you to:
+- Use your private RAG endpoints
+- Access company-specific knowledge bases
+- Keep sensitive queries within your infrastructure
+- Use any model you've configured in OpenWebUI
 
-Give it a try - you might be surprised at how much more useful your Raycast experience becomes with the right AI model for each specific task.
+## Using the Extension
 
-Happy prompting!
+Once configured, you can:
+
+1. Press `⌘ + space` to open Raycast
+2. Type "chat" or your configured keyword
+3. Press Enter to start a new conversation
+4. Start typing your query
+
+The extension supports:
+- Markdown formatting
+- Code highlighting
+- Conversation history
+- Multiple chat sessions
+- Custom system prompts
+
+## Pro Tips
+
+- Configure a dedicated shortcut for the ChatGPT extension in Raycast preferences
+- Create different shortcuts for different models or RAG configurations
+- Use the "Always on Top" feature to keep the chat window visible while working
+- Leverage keyboard shortcuts within the chat interface for faster interaction
+
+This setup gives you the flexibility to use any LLM provider while maintaining the convenience of a global shortcut. Whether you're using OpenAI directly, accessing multiple models through OpenRouter, or leveraging your own OpenWebUI deployment with custom RAGs, it's all available through the same familiar interface.

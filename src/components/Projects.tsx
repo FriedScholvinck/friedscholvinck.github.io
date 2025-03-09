@@ -3,9 +3,9 @@ import { ArrowRight } from "lucide-react";
 const projects = [{
   title: "Machine Learning Engineer at Xomnia",
   description: "Leading AI agency in the Netherlands. Currently serving as topic lead on GenAI and tech lead for multiple client projects.",
-  tags: ["Machine Learning", "Leadership", "AI"],
+  tags: ["Machine Learning", "Consulting", "GenAI"],
   date: "2020 - Present",
-  highlights: ["Tech lead for VodafoneZiggo's AI agents and chatbots", "Azure Databricks migration for Gemeente Amsterdam", "FrieslandCampina churn prediction and marketing mix modeling", "Air traffic prediction models for LVNL", "Fraud detection for Schadegarant"]
+  highlights: ["AI Engineer for VodafoneZiggo's customer service AI product", "Azure Databricks migration for Gemeente Amsterdam", "FrieslandCampina churn prediction and marketing mix modeling", "Air traffic prediction models for LVNL", "Fraud detection for Schadegarant"]
 }, {
   title: "Artist Portfolio Website",
   description: "Developed a modern web platform showcasing the works of early 1900s Dutch painter Huib Luns",
