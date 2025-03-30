@@ -12,7 +12,7 @@ const skills = [{
   category: "DevOps & Infrastructure",
   items: ["Docker", "Kubernetes", "Terraform", "CI/CD", "Git"]
 }, {
-  category: "dev tools",
+  category: "Development Tools",
   items: ["bash", "vim", "raycast", "cursor"]
 }];
 export default function Skills() {

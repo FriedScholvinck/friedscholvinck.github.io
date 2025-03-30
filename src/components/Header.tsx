@@ -1,4 +1,3 @@
-
 import { Github, Linkedin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -41,6 +40,12 @@ export default function Header() {
             className="text-sm hover:text-primary/80 transition-colors"
           >
             Blog
+          </button>
+          <button 
+            onClick={() => scrollToSection('#tools-section')} 
+            className="text-sm hover:text-primary/80 transition-colors"
+          >
+            Tools 
           </button>
         </nav>
         <div className="flex items-center gap-4">

@@ -1,10 +1,10 @@
-
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Blog from "@/components/Blog";
+import ToolsShowcase from "@/components/ToolsShowcase";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -39,6 +39,7 @@ const Index = () => {
         <Skills />
         <Projects />
         <Blog />
+        <ToolsShowcase />
       </main>
       <Footer />
     </div>

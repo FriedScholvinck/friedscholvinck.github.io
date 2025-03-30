@@ -1,4 +1,4 @@
-# How to enable any LLM from `⌘ + space`
+# How to enable any LLM from `⌘ + space` on your Mac?
 
 If you're a developer, you've probably experienced those moments when you need a quick answer while coding or doing some other task.. ChatGPT's desktop app has made this incredibly convenient with its global shortcut `⌥ + space` (Option + Space). No matter what application you're in, whether it's your code editor, terminal, or browser, you can instantly summon ChatGPT with this keyboard combination and it will present you with a floating chat interface.
 
