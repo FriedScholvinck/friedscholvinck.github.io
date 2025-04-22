@@ -1,26 +1,26 @@
-# OpenWebUI: Open Source AI Chat for Your Company
+# Setting up OpenWebUI: Open Source AI Chat for you or your company
 date: "2025-02-25"
 tags: ["Open Source", "AI", "Chat", "WebUI"]
 
-I've always had a soft spot for open source software. There's something beautiful about the community-driven approach - people building things together just because they're useful and interesting. Lately, I've been thinking a lot about how open source AI applications are quietly catching up to proprietary solutions. The gap is closing faster than most people realize.
+Open source AI is quickly catching up to its proprietary counterparts. Next to open source models, AI applications are also becoming more and more powerful and flexible.
 
-For me, it's also about sovereignty. I'm not particularly comfortable with my company's data living exclusively on servers in the US, controlled by a handful of tech giants. Digital independence matters, especially when you're working with sensitive information or simply want control over your tech stack.
+Beyond cost, the flexibility of open source solutions gives you control over your data, privacy, and customization options. You can modify, extend, and integrate these tools in ways that closed systems simply don't allow. This becomes particularly valuable when you need specialized capabilities or want to incorporate AI into existing workflows.
 
-That's why I've been experimenting with [OpenWebUI](https://docs.openwebui.com/), and thought I'd share my experience setting it up.
+That's why I, and a lot of other with me, have been experimenting with [OpenWebUI](https://docs.openwebui.com/), and thought I'd share my experience setting it up.
 
 ![OpenWebUI](/images/blog/owui.png)
 
 ## What is OpenWebUI?
 
-OpenWebUI is an open source web interface for interacting with AI models. Think of it as a self-hosted alternative to commercial AI chat platforms, but with more flexibility.
+OpenWebUI is an [open source](https://github.com/open-webui/open-webui) web interface for interacting with AI models. The application has a frontend like ChatGPT and a Python backend that is easy to use. It's a great way to get started with AI and build your own custom solutions.
 
-A common misconception is that you need to run local models to use something like OpenWebUI. That's not true at all. While you can connect it to locally-hosted models (via Ollama, for example), you can just as easily hook it up to commercial APIs through services like OpenRouter.ai, or directly to providers like OpenAI, Anthropic, or Google.
+A common misconception is that you need to run local models to use something like OpenWebUI. That's not true at all. While you can connect it to locally-hosted models (via Ollama, for example), you can just as easily hook it up to commercial APIs through services like [OpenRouter.ai](https://openrouter.ai/), or directly to providers like OpenAI, Anthropic, or Google.
+
+## Why consider OpenWebUI?
 
 What makes OpenWebUI particularly useful for organizations is how it handles knowledge management. The platform makes it straightforward to set up custom RAGs (Retrieval Augmented Generation) and specialized assistants that can access your company's private documents and data. 
 
 The access management is surprisingly simple too. You can configure user groups, implement single sign-on, and control who has access to which models and features without much fuss.
-
-## Why Consider OpenWebUI?
 
 For me, the main appeal is giving employees a consistent interface to interact with AI models in a way that's secure and cost-effective. Instead of everyone having separate commercial AI accounts (with separate billing!), you can centralize everything.
 
@@ -30,28 +30,66 @@ There's also a learning component here. Getting your developers familiar with de
 
 I've noticed that creating custom full-stack software has become remarkably accessible these days. Between modern frameworks, containers, and open source components, the barrier to entry for building your own solutions has dropped dramatically. That's why I suspect the SaaS model might not remain as profitable as it has been - when building your own becomes this easy, paying ongoing subscriptions makes less sense for many use cases.
 
-## How to Deploy OpenWebUI
+## How to deploy OpenWebUI?
 
-Setting up OpenWebUI is pretty straightforward. Here's how I did it on a basic VM from a European provider (I used Hetzner, but Contabo or any similar service works fine):
+Setting up OpenWebUI is pretty straightforward. The only thing you need is a server with Docker installed.
 
-### Prerequisites
+You can also set it up on a container service provider like Azure Web Apps or AWS ECS, but this will cost you more and you won't need it (unless you need to scale your application to thousands of users).
 
-- A VM with 4GB RAM and 2 CPUs (more if you want to run local models)
-- Ubuntu 20.04 or newer
-- Docker and Docker Compose installed
+Some considerations upfront:
+- Number of concurrent users
+- Maintenance and version updates
+- Data privacy and security
+- Cloud costs
 
-### Step 1: Prepare Your VM
+### Server configuration
 
-After creating your VM, SSH in and update the system:
+I used a basic VM from Hetzner (a European cloud provider), because they are a lot cheaper than other providers (like Azure or AWS):
+
+- CPX21 | x86 | 80 GB | eu-central
+
+This is enough for most use cases, but you need more if you want to run models locally.
+
+1. Create a project
+2. Create a firewall rule to allow HTTP (TCP/80) and HTTPS (TCP/443) + SSH (TCP/22)
+  - Inbound HTTP
+    - Any IPv4, IPv6
+    - Protocol: TCP
+    - Port: 80
+  - Inbound HTTPS
+    - Any IPv4, IPv6
+    - Protocol: TCP
+    - Port: 443
+  - Inbound SSH
+    - {your_ip}
+    - Protocol: TCP
+    - Port: 22
+3. Create resource / Servers -> Add server
+  - Set location
+  - Set image (pick Apps -> Docker CE)
+  - Type: shared CPU - CPX21
+  - Networking: leave at public IPv4 and public IPv6
+  - SSH keys: add your SSH key
+  - Firewall: add the firewall rule you created in step 2
+  - Name: openwebui-server (or anything else)
+
+### Step 1: Prepare your VM
+
+After creating your VM, SSH into it:
 
 ```bash
 ssh user@your-server-ip
-sudo apt update && sudo apt upgrade -y
 ```
 
-Install Docker and Docker Compose if they're not already available:
+You can use VSCode to SSH into your server and see the file structure:
+- Install the SSH extension
+- Connect to your server
+- Open the folder where you want to deploy OpenWebUI
+
+If they're not already available, install Docker:
 
 ```bash
+sudo apt update && sudo apt upgrade -y
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
@@ -217,5 +255,3 @@ If you prefer a more managed approach, Coolify makes deployment even simpler:
 OpenWebUI isn't perfect, but it represents something important - the democratization of AI tools. You don't need to be locked into specific vendors or platforms to give your team access to powerful AI capabilities.
 
 What I appreciate most is the flexibility. As the AI landscape evolves and new models emerge, you can adapt without migration headaches or vendor lock-in. That kind of freedom is worth the small effort of setting up your own infrastructure.
-
-Open source solutions like this remind me that technology works best when it empowers people to solve problems their own way. Whether you're looking for data sovereignty, cost control, or just a better way to provide AI tools to your team, it's worth giving OpenWebUI a try.

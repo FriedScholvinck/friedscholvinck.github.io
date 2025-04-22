@@ -1,49 +1,27 @@
-# How to enable any LLM from `⌘ + space` on your Mac?
+# How to enable any LLM from `⌥ + space` on your Mac?
 
-If you're a developer, you've probably experienced those moments when you need a quick answer while coding or doing some other task.. ChatGPT's desktop app has made this incredibly convenient with its global shortcut `⌥ + space` (Option + Space). No matter what application you're in, whether it's your code editor, terminal, or browser, you can instantly summon ChatGPT with this keyboard combination and it will present you with a floating chat interface.
+I am using a lot of AI in my daily work. As a developer, but also in my work in general, I constantly interact with LLMs to get quick answers to technical questions, explanations or deep dives into certain topics. I want to keep my hands on the keyboard and stay in the flow, so I don't want to open my browser or another application for that. 
 
-This seamless integration into your workflow is a game-changer for productivity. Instead of context-switching to your browser, logging in, and navigating to ChatGPT, you can get answers without breaking your flow. 
+ChatGPT's desktop app has made this incredibly convenient with its global shortcut `⌥ + space` (Option + Space). No matter what application you're in, it will present you with a chat interface floating over your current open windows, which is a game-changer for my productivity.
 
-This is usefull, but it is not easy to modify its behavior or call other LLMs from this shortcut. Raycast offers more flexibility and customization options with its extendable architecture.
+While this is useful, it is not possible to modify its behavior or call other LLMs (or agents) from this shortcut.
 
-## Setting up Raycast with ChatGPT
+## Raycast
+An app like [Raycast](https://www.raycast.com/) offers exactly this global shortcut functionality with a floating window, but then with more flexibility and customization options with its extendable architecture. 
 
-First, install [Raycast](https://www.raycast.com/) if you haven't already. It's a powerful productivity tool that can replace Spotlight on macOS.
+If you haven't already, I highly recommend installing Raycast. It offers better functionality than spotlight for most simple use cases (e.g. file search) and has a store with many plugings. It even comes with a lot of useful agentic AI if you want.
 
-Once installed, open Raycast (default shortcut is `⌘ + space`) and follow these steps:
+In the Raycast store, you can find the ChatGPT extension that let's you interact with the OpenAI API. Install it and open up the chat window by typing 'ask question'. This seems more work than the previously mentioned `⌥ + space` command, but within Raycast you can map any keyboard combination to any command, so you are free to choose your quick AI keyboard shortcut.
 
-1. Press `⌘ + ,` to open Raycast preferences
-2. Go to Extensions
-3. Search for "ChatGPT" in the Store tab
-4. Click Install
+By default, the extension uses OpenAI's API endpoint. However, you can modify the base URL to point to any compatible API endpoint. 
 
-## Configuring the Extension
+## OpenRouter
+[OpenRouter](https://openrouter.ai/) is an OpenAI compatible proxy to basically any LLM available. It is very easy to use and you only need one account. There is no need to bring your own API keys and pay multiple providers.
 
-After installation, you'll need to configure the extension with your API key:
-
-1. Open Raycast preferences again
-2. Go to Extensions > ChatGPT
-3. Click on the extension settings
-4. Enter your API key
-
-By default, the extension uses OpenAI's API endpoint. However, you can modify the base URL to point to any compatible API endpoint.
-
-## Using Alternative LLM Providers
-
-### OpenRouter
-
-To use OpenRouter instead of OpenAI directly:
-
-1. Get an API key from [OpenRouter](https://openrouter.ai/)
-2. In the extension settings, change the API Base URL to:
-   ```
-   https://openrouter.ai/api/v1
-   ```
-3. Enter your OpenRouter API key
-
-Now you can use any model available on OpenRouter directly from Raycast!
+In the ChatGPT extensions settings in Raycast, change the base URL to `https://openrouter.ai/api/v1` and enter your OpenRouter API key. Now when you ask a question, you can choose any model available on OpenRouter with `⌘ + p`.
 
 ### Self-hosted OpenWebUI
+You can even take this one step further and enable any of your own agents or RAGs from this Raycast window by connecting it to your OpenWebUI instance.
 
 If you're running your own OpenWebUI instance (as described in my [previous post](/blog/openwebui)), you can point Raycast to your deployment:
 
@@ -54,32 +32,5 @@ If you're running your own OpenWebUI instance (as described in my [previous post
 2. Use your OpenWebUI API key
 
 This setup allows you to:
-- Use your private RAG endpoints
-- Access company-specific knowledge bases
+- Use your private RAG endpoints (e.g. access company-specific knowledge bases)
 - Keep sensitive queries within your infrastructure
-- Use any model you've configured in OpenWebUI
-
-## Using the Extension
-
-Once configured, you can:
-
-1. Press `⌘ + space` to open Raycast
-2. Type "chat" or your configured keyword
-3. Press Enter to start a new conversation
-4. Start typing your query
-
-The extension supports:
-- Markdown formatting
-- Code highlighting
-- Conversation history
-- Multiple chat sessions
-- Custom system prompts
-
-## Pro Tips
-
-- Configure a dedicated shortcut for the ChatGPT extension in Raycast preferences
-- Create different shortcuts for different models or RAG configurations
-- Use the "Always on Top" feature to keep the chat window visible while working
-- Leverage keyboard shortcuts within the chat interface for faster interaction
-
-This setup gives you the flexibility to use any LLM provider while maintaining the convenience of a global shortcut. Whether you're using OpenAI directly, accessing multiple models through OpenRouter, or leveraging your own OpenWebUI deployment with custom RAGs, it's all available through the same familiar interface.
