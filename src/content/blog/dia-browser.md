@@ -54,4 +54,4 @@ I hope The Browser Company proves me wrong. Maybe Dia will evolve into something
 
 But for now, Dia feels like a browser built for no one in particular. It's not different enough to win over Chrome users, and it's not powerful enough to satisfy Arc enthusiasts.
 
-Until then, I'll be sticking with Arc and hoping it doesn't get abandoned entirely in favor of the AI trend du jour. 
+Until then, I'll be sticking with Arc and hoping it doesn't get abandoned entirely in favor of the AI trend of the day. 
