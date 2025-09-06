@@ -11,7 +11,7 @@ export default function Blog() {
           <p className="subheading">Thoughts and technology, software development and AI.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 items-start">
           {allPosts.map(post => (
             <Link to={`/blog/${post.slug}`} key={post.slug}>
               <Card className="p-6 card-hover animate-on-scroll">

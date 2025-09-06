@@ -1,4 +1,6 @@
 # How to enable any LLM from `⌥ + space` on your Mac?
+date: "2025-04-19"
+tags: ["LLM", "Chat", "Raycast", "OpenRouter"]
 
 I am using a lot of AI in my daily work. As a developer, but also in my work in general, I constantly interact with LLMs to get quick answers to technical questions, explanations or deep dives into certain topics. I want to keep my hands on the keyboard and stay in the flow, so I don't want to open my browser or another application for that. 
 

@@ -1,4 +1,6 @@
 # Dia: missing essential features and agentic power
+date: "2025-06-12"
+tags: ["Browser", "AI", "Arc"]
 
 When The Browser Company announced Dia, their new AI-powered browser, I was curious. As someone who switched from Chrome to Arc and fell in love with its innovative approach to browsing, I wanted to see what they'd come up with next.
 

@@ -3,25 +3,28 @@ import { ArrowRight } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 const projects = [{
   title: "Machine Learning Engineer at Xomnia",
-  description: "Leading AI agency in the Netherlands. Currently serving as topic lead on GenAI and tech lead for multiple client projects.",
-  tags: ["Consulting", "GenAI", "Machine Learning", "Data Engineering"],
+  description: "Leading AI agency in the Netherlands. Currently as topic lead on GenAI and tech lead and AI engineer on internal and client projects.",
+  tags: ["Consulting", "Machine Learning", "GenAI", "Agentic AI", "Data Engineering"],
   date: "2020 - Present",
   highlights: ["AI Engineer for [VodafoneZiggo](https://xomnia.com/vodafoneziggo-boosts-its-customer-service-with-generative-ai/)'s customer service AI products", "Azure Databricks migration for Gemeente Amsterdam", "FrieslandCampina churn prediction and marketing mix modeling", "Air traffic prediction models for LVNL", "Fraud detection for Schadegarant"],
   link: "https://www.xomnia.com"
-}, {
-  title: "Artist Portfolio Website",
-  description: "Developed a modern web platform showcasing the works of early 1900s Dutch painter Huib Luns",
-  tags: ["Full Stack", "Frontend (Vite/React/Tailwind CSS)", "Supabase"],
-  date: "2025",
-  type: "Personal Project",
-  link: "https://huibluns.nl"
-}, {
+}, 
+{
   title: "CatFinder",
   description: "Custom facial recognition model to reunite lost cats with their owners",
-  tags: ["Deep Learning", "Computer Vision", "Web Scraping", "Full Stack"],
+  tags: ["Deep Learning", "Computer Vision", "YOLO", "EfficientNet", "PyTorch", "Vector Embeddings", "Python Web Scraping", "Docker", "Azure Container Apps"],
   date: "2022",
-  type: "Personal Project"
-}, {
+  // type: "Personal Project"
+}, 
+{
+  title: "Artist Portfolio Website",
+  description: "Developed a modern web platform showcasing the works of early 1900s Dutch painter Huib Luns",
+  tags: ["Frontend (Vite/React/Tailwind CSS)", "Supabase", "Cursor", "Lovable", "Github", "Netlify"],
+  date: "2025",
+  // type: "Personal Project",
+  link: "https://huibluns.nl"
+}, 
+{
   title: "AI Startup LAB - ABN AMRO Collaboration",
   description: "Developed an AI tool to predict and visualize household solar energy supply and demand",
   tags: ["Machine Learning", "Energy", "Visualization", "Entrepreneurship"],
@@ -36,8 +39,8 @@ export default function Projects() {
           <p className="subheading">Professional work and personal projects showcasing expertise in AI, machine learning, and development.</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12">
-          {projects.map(project => <Card key={project.title} className="group p-6 card-hover animate-on-scroll">
+        <div className="columns-1 lg:columns-2 gap-6 mt-12 space-y-6">
+          {projects.map(project => <Card key={project.title} className="group p-6 card-hover animate-on-scroll" style={{breakInside: 'avoid'}}>
               <div className="flex justify-between items-start mb-2">
                 {project.link ? (
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-primary focus:text-primary font-medium text-lg flex flex-col">
@@ -50,7 +53,7 @@ export default function Projects() {
                     <p className="text-muted-foreground text-sm">{project.description}</p>
                   </div>
                 )}
-                <span className="text-sm text-muted-foreground">{project.date}</span>
+                 <span className="text-sm text-muted-foreground ml-4">{project.date}</span>
               </div>
               {project.highlights && <ul className="list-disc list-inside text-sm text-muted-foreground mb-4 space-y-1">
                 {project.highlights.map((highlight, index) => (
@@ -71,7 +74,7 @@ export default function Projects() {
                     {tag}
                   </span>)}
               </div>
-              {project.type && <p className="text-sm text-muted-foreground">{project.type}</p>}
+              {/* {project.type && <p className="text-sm text-muted-foreground">{project.type}</p>} */}
             </Card>)}
         </div>
       </div>
