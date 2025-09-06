@@ -29,7 +29,7 @@ const projects = [{
   location: "Science Park, Amsterdam"
 }];
 export default function Projects() {
-  return <section id="projects" className="section-padding bg-secondary/50">
+  return <section id="projects" className="section-padding">
       <div className="container">
         <div className="animate-on-scroll">
           <h2 className="heading">💼 Experience & Projects</h2>

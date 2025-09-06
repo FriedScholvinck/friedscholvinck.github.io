@@ -1,5 +1,6 @@
 import { Github, Linkedin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Header() {
   const location = useLocation();
@@ -19,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 border-b">
+    <header className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="playfair text-xl font-medium">Fried.</Link>
         <nav className="hidden md:flex items-center gap-8">
@@ -49,12 +50,13 @@ export default function Header() {
           </button>
         </nav>
         <div className="flex items-center gap-4">
-          <a href="https://github.com/friedscholvinck" target="_blank" rel="noopener noreferrer" 
-             className="p-2 hover:bg-secondary rounded-full transition-colors">
+          <ThemeToggle />
+          <a href="https://github.com/friedscholvinck" target="_blank" rel="noopener noreferrer"
+              className="p-2 hover:bg-secondary rounded-full transition-colors">
             <Github className="w-5 h-5" />
           </a>
           <a href="https://www.linkedin.com/in/fried-scholvinck/" target="_blank" rel="noopener noreferrer"
-             className="p-2 hover:bg-secondary rounded-full transition-colors">
+              className="p-2 hover:bg-secondary rounded-full transition-colors">
             <Linkedin className="w-5 h-5" />
           </a>
         </div>

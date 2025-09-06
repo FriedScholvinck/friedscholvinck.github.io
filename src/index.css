@@ -28,6 +28,28 @@
     --radius: 1rem;
   }
 
+  .dark {
+    --background: 229 19% 20%;
+    --foreground: 220 14% 96%;
+    --card: 229 14% 26%;
+    --card-foreground: 220 14% 96%;
+    --popover: 229 14% 26%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 214 76% 75%;
+    --primary-foreground: 229 19% 20%;
+    --secondary: 229 11% 32%;
+    --secondary-foreground: 220 14% 96%;
+    --muted: 229 11% 32%;
+    --muted-foreground: 220 13% 68%;
+    --accent: 229 9% 40%;
+    --accent-foreground: 220 14% 96%;
+    --destructive: 348 57% 70%;
+    --destructive-foreground: 229 19% 20%;
+    --border: 229 9% 40%;
+    --input: 229 14% 26%;
+    --ring: 214 76% 75%;
+  }
+
   * {
     @apply border-border;
   }
