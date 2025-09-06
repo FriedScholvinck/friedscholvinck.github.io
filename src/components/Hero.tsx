@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const solutions = ["AI solutions", "websites", "scalable web applications", "robust REST APIs", "cloud platforms", "data pipelines", "AI chatbots", "dynamic agents", "custom ML models", "real-time analytics"];
+const solutions = ["AI solutions", "websites", "scalable web applications", "robust REST APIs", "cloud platforms", "data pipelines", "AI chatbots", "autonomous agents", "custom ML models", "real-time analytics"];
 export default function Hero() {
   const [currentText, setCurrentText] = useState("");
   const [currentSolutionIndex, setCurrentSolutionIndex] = useState(0);
@@ -38,9 +38,9 @@ export default function Hero() {
         <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">FULL STACK & MACHINE LEARNING ENGINEER</p>
         <h1 className="heading">
           Hello, I'm Fried.<br />
-          I build <span className="text-primary relative">
+          I build <span className="text-primary relative inline-block">
             {currentText}
-            <span className="absolute right-[-4px] top-0 border-r-2 border-primary animate-[blink_0.7s_infinite]">&nbsp;</span>
+            <span className="absolute right-0 top-[-0.1em] border-r-2 border-primary animate-[blink_0.7s_infinite] h-[1.2em]">&nbsp;</span>
           </span><br />
         </h1>
         <p className="subheading">📍Amsterdam</p>
