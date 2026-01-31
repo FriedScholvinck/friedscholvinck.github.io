@@ -24,7 +24,6 @@ const skills = [
       "MLOps Best Practices",
       "Technical Communication",
       "API Design",
-      "Code Review & Mentoring"
     ]
   },
   // {

@@ -66,6 +66,7 @@ export function ToolsShowcase() {
       <div className="container">
         <div className="animate-on-scroll">
           <h2 className="heading">🧰 Tools</h2>
+          <p className="subheading">(dev) tools I like to use</p>
         </div>
 
         <TooltipProvider delayDuration={100}>

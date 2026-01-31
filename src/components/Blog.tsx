@@ -8,7 +8,7 @@ export default function Blog() {
       <div className="container">
         <div className="animate-on-scroll">
           <h2 className="heading">🖋️ Blog</h2>
-          <p className="subheading">Thoughts and technology, software development and AI.</p>
+          <p className="subheading">Tips, thoughts and my opinions on technology, software development and AI.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 items-start">
