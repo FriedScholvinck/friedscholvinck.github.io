@@ -109,22 +109,25 @@ export default function BlogPost() {
             <ReactMarkdown
               components={{
                 img: ({ node, src, alt, ...props }) => {
-                  if (imageError[src || '']) {
+                  const safeSrc =
+                    src && !/^\s*javascript:/i.test(src) ? src : undefined;
+                  if (!safeSrc || imageError[safeSrc]) {
                     return (
                       <div className="flex items-center justify-center border border-dashed border-gray-300 rounded-lg p-4 my-6 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Image not found: {alt}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          Image not found: {alt}
+                        </p>
                       </div>
                     );
                   }
-                  
                   return (
                     <figure className="my-8">
                       <img
-                        src={src}
+                        src={safeSrc}
                         alt={alt || "Blog image"}
                         className="rounded-lg w-full max-w-full shadow-md object-cover"
                         loading="lazy"
-                        onError={() => src && handleImageError(src)}
+                        onError={() => handleImageError(safeSrc)}
                         {...props}
                       />
                       {alt && alt !== "Blog image" && (
@@ -135,17 +138,29 @@ export default function BlogPost() {
                     </figure>
                   );
                 },
-                a: ({ node, href, children, ...props }) => (
-                  <a 
-                    href={href} 
-                    target={href?.startsWith('http') ? "_blank" : undefined}
-                    rel={href?.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="text-primary hover:text-primary/80 underline underline-offset-4"
-                    {...props}
-                  >
-                    {children}
-                  </a>
-                ),
+                a: ({ node, href, children, ...props }) => {
+                  const safeHref =
+                    href &&
+                    !/^\s*javascript:/i.test(href) &&
+                    !/^\s*data:/i.test(href)
+                      ? href
+                      : "#";
+                  return (
+                    <a
+                      href={safeHref}
+                      target={safeHref.startsWith("http") ? "_blank" : undefined}
+                      rel={
+                        safeHref.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className="text-primary hover:text-primary/80 underline underline-offset-4"
+                      {...props}
+                    >
+                      {children}
+                    </a>
+                  );
+                },
               }}
             >
               {content}

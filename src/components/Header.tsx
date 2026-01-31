@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50">
+    <header className="fixed top-0 w-full bg-transparent z-50">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="playfair text-xl font-medium">Fried.</Link>
         <nav className="hidden md:flex items-center gap-8">

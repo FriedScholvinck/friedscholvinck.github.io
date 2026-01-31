@@ -6,21 +6,20 @@ const skills = [
       "Advanced Python",
       "FastAPI",
       "PyTorch", "Transformers", 
-      "LangGraph", "smolagents",
-      "Polars", "PySpark", "Databricks",
-      "Streamlit",
+      "LangGraph", "Smolagents",
+      "Polars", "Databricks",
+      "Streamlit", "Marimo",
       "AWS", "Azure", "GCP",
       "Docker",
-      "Github", "Gitlab", "Netlify",
+      "Github", "Gitlab", "Dokploy", "Vercel", "Netlify",
       "Supabase", "Opensearch"
     ]
   },
   {
     category: "Consulting",
     items: [
-      "AI Vision & Strategy",
+      "AI Strategy",
       "Project Planning & Management",
-      "Cloud Strategy",
       "Software Architecture",
       "MLOps Best Practices",
       "Technical Communication",
@@ -30,7 +29,7 @@ const skills = [
   },
   // {
   //   category: "Vibe Coding",
-  //   items: ["[put your skills here]"]
+  //   items: [""]
   // }
 ];
 export default function Skills() {

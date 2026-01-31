@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-const solutions = ["AI solutions", "websites", "scalable web applications", "robust REST APIs", "cloud platforms", "data pipelines", "AI chatbots", "autonomous agents", "custom ML models", "real-time analytics"];
+const solutions = ["AI solutions", "useful agents", "web applications", "REST APIs", "data pipelines", "custom ML models", "advanced analytics dashboards", "websites"];
 export default function Hero() {
   const [currentText, setCurrentText] = useState("");
   const [currentSolutionIndex, setCurrentSolutionIndex] = useState(0);
@@ -36,7 +36,7 @@ export default function Hero() {
   return <section className="min-h-screen flex items-center section-padding pt-32">
     <div className="container">
       <div className="animate-on-scroll">
-        <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">FULL STACK & MACHINE LEARNING ENGINEER</p>
+        <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">AI ENGINEER</p>
         <h1 className="heading">
           Hello, I'm <HoverCard openDelay={0}>
             <HoverCardTrigger className="cursor-pointer">Fried.</HoverCardTrigger>

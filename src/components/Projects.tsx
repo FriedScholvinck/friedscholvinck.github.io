@@ -3,11 +3,15 @@ import { ArrowRight } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 const projects = [{
   title: "Machine Learning Engineer at Xomnia",
-  description: "Leading AI agency in the Netherlands. Currently as topic lead on GenAI and tech lead and AI engineer on internal and client projects.",
+  description: "Leading AI agency in the Netherlands. I currently lead our endevours in Generative and Agentic AI.",
   tags: ["Consulting", "Machine Learning", "GenAI", "Agentic AI", "Data Engineering"],
   date: "2020 - Present",
-  highlights: ["AI Engineer for [VodafoneZiggo](https://xomnia.com/vodafoneziggo-boosts-its-customer-service-with-generative-ai/)'s customer service AI products", "Azure Databricks migration for Gemeente Amsterdam", "FrieslandCampina churn prediction and marketing mix modeling", "Air traffic prediction models for LVNL", "Fraud detection for Schadegarant"],
-  link: "https://www.xomnia.com"
+  highlights: [
+    "AI Engineer for [VodafoneZiggo](https://xomnia.com/vodafoneziggo-boosts-its-customer-service-with-generative-ai/)'s customer service AI products",
+    "Churn prediction, marketing mix modeling, and more",
+    "Air traffic control, fraud detection, and more"
+  ],
+  link: "https://xomnia.com"
 }, 
 {
   title: "CatFinder",

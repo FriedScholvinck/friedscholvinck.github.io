@@ -1,6 +1,8 @@
-# Setting up OpenWebUI: Open Source AI Chat for you or your company
+---
+title: "Setting up OpenWebUI: Open Source AI Chat for you or your company"
 date: "2025-02-25"
 tags: ["Open Source", "AI", "Chat", "WebUI"]
+---
 
 Open source AI is quickly catching up to its proprietary counterparts. Next to open source models, AI applications are also becoming more and more powerful and flexible.
 
@@ -18,7 +20,7 @@ A common misconception is that you need to run local models to use something lik
 
 ## Why consider OpenWebUI?
 
-What makes OpenWebUI particularly useful for organizations is how it handles knowledge management. The platform makes it straightforward to set up custom RAGs (Retrieval Augmented Generation) and specialized assistants that can access your company's private documents and data. 
+What makes OpenWebUI particularly useful for organizations is how it handles knowledge management. The platform makes it straightforward to set up custom RAGs (Retrieval Augmented Generation) and specialized assistants that can access your company's private documents and data.
 
 The access management is surprisingly simple too. You can configure user groups, implement single sign-on, and control who has access to which models and features without much fuss.
 

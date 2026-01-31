@@ -1,6 +1,8 @@
-# Setting Up Smolagents with OpenWebUI
+---
+title: "Setting Up Smolagents with OpenWebUI"
 date: "2025-03-12"
 tags: ["AI", "Open Source", "OpenWebUI", "Smolagents"]
+---
 
 HuggingFace's Smolagents is a lightweight framework for building AI agents that can reason through problems step by step. It provides simple ways to create agents that can think, solve problems, and interact with users through natural language.
 
